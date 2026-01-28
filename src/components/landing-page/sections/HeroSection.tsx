@@ -1,6 +1,8 @@
 // components/HeroSection.tsx
 import React from "react";
 import { StarField } from "../ui/StarField";
+import { FaGithub, FaEnvelope } from "react-icons/fa";
+import { IoDocumentText } from "react-icons/io5";
 
 export const HeroSection: React.FC = () => {
   return (
@@ -78,6 +80,11 @@ export const HeroSection: React.FC = () => {
                   />
                 </svg>
               </button>
+            </div>
+            <div className="flex gap-8 items-center justify-center mt-10">
+              <FaGithub className="text-[#0a7a82]" size={30} />
+              <FaEnvelope className="text-[#0a7a82]" size={30} />
+              <IoDocumentText className="text-[#0a7a82]" size={30} />
             </div>
           </div>
         </div>
