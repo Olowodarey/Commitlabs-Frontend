@@ -51,11 +51,13 @@
   width: 100%;
 }
 
+/* STEP ROW */
 .stepRow {
-  display: flex;
+  display: flex; /* Desktop */
   gap: 24px;
   margin-bottom: 60px;
   position: relative;
+  align-items: flex-start;
 }
 
 .stepIndicator {
@@ -158,9 +160,17 @@
 }
 
 /* Specific colors */
-.safeYield { color: #4ADE80; }
-.balancedYield { color: #60A5FA; }
-.aggressiveYield { color: #F59E0B; }
+.safeYield {
+  color: #4ADE80;
+}
+
+.balancedYield {
+  color: #60A5FA;
+}
+
+.aggressiveYield {
+  color: #F59E0B;
+}
 
 .stepDescription {
   color: #99A1AF;
@@ -168,13 +178,37 @@
   max-width: 800px;
 }
 
+/* =====================
+   RESPONSIVE
+===================== */
+
 @media (max-width: 900px) {
   .cardsGrid {
     grid-template-columns: 1fr;
   }
-  
+
   .mainHeader {
     font-size: 40px;
     line-height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Step Layout */
+  .stepRow {
+    display: block;
+  }
+
+  .stepIndicator {
+    margin-bottom: 16px;
+  }
+
+  .stepTitle {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 50px;
   }
 }
